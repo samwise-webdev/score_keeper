@@ -5,16 +5,13 @@ const score1 = document.querySelector('#p1');
 const score2 = document.querySelector('#p2');
 const reset = document.querySelector('#reset');
 
-function p1Point() {
-        score1.innerText = Number(score1.innerText) + 1;
-}
-btnP1.addEventListener('click', p1Point); //add a point to player 1
+btnP1.addEventListener('click', function p1Point() {
+    score1.innerText = Number(score1.innerText) + 1;
+}); //add a point to player 1
 
-function p2Point() {
-        score2.innerText = Number(score2.innerText) + 1;
-}
-btnP2.addEventListener('click', p2Point); //add a point to player 2
-
+btnP2.addEventListener('click', function p2Point() {
+    score2.innerText = Number(score2.innerText) + 1;
+}); //add a point to player 2
 
 
 reset.addEventListener('click', function (e) {
