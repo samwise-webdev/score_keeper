@@ -8,11 +8,17 @@ const reset = document.querySelector('#reset');
 let winningScore = 5;
 
 btnP1.addEventListener('click', function p1Point() {
-    score1.innerText = Number(score1.innerText) + 1;
+    let currentScore1 = parseInt(score1.innerText);  //making sure score1 is a number
+    if (currentScore1 !== winningScore) {
+    score1.innerText = currentScore1 + 1;
+    }
 }); //add a point to player 1
 
 btnP2.addEventListener('click', function p2Point() {
-    score2.innerText = Number(score2.innerText) + 1;
+    let currentScore2 = parseInt(score2.innerText); //making sure score2 is a number
+    if (currentScore2 !== winningScore) {
+    score2.innerText = currentScore2 + 1;
+    }
 }); //add a point to player 2
 
 reset.addEventListener('click', function (e) {
@@ -22,13 +28,19 @@ reset.addEventListener('click', function (e) {
 
 //Colt's Way:
 
-// let p1Score = 0;
-// btnP1.addEventListener('click', function () {
-//     p1Score += 1;
-//     p1.textContent = p1Score;
-// })
-// let p2Score = 0;
-// btnP2.addEventListener('click', function () {
-//     p2Score += 1;
-//     p2.textContent = p2Score;
-// })
+        // let p1Score = 0;
+        // let p2Score = 0;
+
+        // btnP1.addEventListener('click', function () {
+        //     if (p1Score !== winningScore) {
+        //         p1Score += 1;
+        //         p1.textContent = p1Score;
+        //     }
+        // })
+
+        // btnP2.addEventListener('click', function () {
+        //     if (p2Score !== winningScore) {
+        //         p2Score += 1;
+        //         p2.textContent = p2Score;
+        //     }
+        // })
