@@ -11,6 +11,15 @@ btnP1.addEventListener('click', function p1Point() {
     score1.innerText = Number(score1.innerText) + 1;
 }); //add a point to player 1
 
+btnP2.addEventListener('click', function p2Point() {
+    score2.innerText = Number(score2.innerText) + 1;
+}); //add a point to player 2
+
+reset.addEventListener('click', function (e) {
+    score1.innerText = 0;
+    score2.innerText = 0;
+}) //reset the scores to 0
+
 //Colt's Way:
 
 // let p1Score = 0;
@@ -23,13 +32,3 @@ btnP1.addEventListener('click', function p1Point() {
 //     p2Score += 1;
 //     p2.textContent = p2Score;
 // })
-
-btnP2.addEventListener('click', function p2Point() {
-    score2.innerText = Number(score2.innerText) + 1;
-}); //add a point to player 2
-
-
-reset.addEventListener('click', function (e) {
-    score1.innerText = 0;
-    score2.innerText = 0;
-}) //reset the scores to 0
