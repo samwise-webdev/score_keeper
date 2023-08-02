@@ -6,6 +6,7 @@ const score2 = document.querySelector('#p2');
 const reset = document.querySelector('#reset');
 
 let winningScore = 5;
+let isGameOver = false;
 
 btnP1.addEventListener('click', function p1Point() {
     let currentScore1 = parseInt(score1.innerText);  //making sure score1 is a number
@@ -32,15 +33,21 @@ reset.addEventListener('click', function (e) {
         // let p2Score = 0;
 
         // btnP1.addEventListener('click', function () {
-        //     if (p1Score !== winningScore) {
+        //     if (!isGameOver) { //when isGameOver returns true, the code no longer runs
         //         p1Score += 1;
+        //         if (p1Score === winningScore) {
+        //             isGameOver = true;
+        //         }
         //         p1.textContent = p1Score;
         //     }
         // })
 
         // btnP2.addEventListener('click', function () {
-        //     if (p2Score !== winningScore) {
+        //     if (!isGameOver) {
         //         p2Score += 1;
+        //         if (p2Score === winningScore) {
+        //             isGameOver = true;
+        //         }
         //         p2.textContent = p2Score;
         //     }
         // })
